@@ -1,0 +1,49 @@
+{
+  "michelin": [
+    { "kind": "michelin3", "value": "3스타" },
+    { "kind": "michelin2", "value": "2스타" },
+    { "kind": "michelin1", "value": "1스타" },
+    { "kind": "michelinb", "value": "빕구르밍" }
+  ],
+  "blue": [
+    { "kind": "blue3", "value": "3개" },
+    { "kind": "blue2", "value": "2개" }
+  ],
+  "hundred": [{ "kind": "hundred", "value": "백년가게" }],
+  "future": [{ "kind": "future", "value": "미래유산" }],
+
+  "district": [
+    { "kind": "강남구", "value": "강남구" },
+    { "kind": "강동구", "value": "강동구" },
+    { "kind": "강북구", "value": "강북구" },
+    { "kind": "강서구", "value": "강서구" },
+    { "kind": "관악구", "value": "관악구" },
+    { "kind": "광진구", "value": "광진구" },
+    { "kind": "구로구", "value": "구로구" },
+    { "kind": "금천구", "value": "금천구" },
+    { "kind": "노원구", "value": "노원구" },
+    { "kind": "도봉구", "value": "도봉구" },
+    { "kind": "동대문구", "value": "동대문구" },
+    { "kind": "동작구", "value": "동작구" },
+    { "kind": "마포구", "value": "마포구" },
+    { "kind": "서대문구", "value": "서대문구" },
+    { "kind": "서초구", "value": "서초구" },
+    { "kind": "성동구", "value": "성동구" },
+    { "kind": "성북구", "value": "성북구" },
+    { "kind": "송파구", "value": "송파구" },
+    { "kind": "양천구", "value": "양천구" },
+    { "kind": "영등포구", "value": "영등포구" },
+    { "kind": "용산구", "value": "용산구" },
+    { "kind": "은평구", "value": "은평구" },
+    { "kind": "종로구", "value": "종로구" },
+    { "kind": "중구", "value": "중구" },
+    { "kind": "중랑구", "value": "중랑구" }
+  ],
+
+  "genre": [
+    { "kind": "한식", "value": "한식" },
+    { "kind": "중식", "value": "중식" },
+    { "kind": "일식", "value": "일식" },
+    { "kind": "양식", "value": "양식" }
+  ]
+}
