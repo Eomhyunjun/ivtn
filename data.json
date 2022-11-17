@@ -12,7 +12,9 @@
       "hundred": [],
       "future": [],
       "district": "강남구",
-      "genre": "일식"
+      "genre": "일식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 1,
@@ -26,7 +28,9 @@
       "hundred": [],
       "future": [],
       "district": "광진구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 2,
@@ -40,7 +44,9 @@
       "hundred": [],
       "future": [],
       "district": "마포구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 3,
@@ -54,7 +60,9 @@
       "hundred": [],
       "future": [],
       "district": "서대문구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 4,
@@ -68,7 +76,9 @@
       "hundred": [],
       "future": [],
       "district": "서초구",
-      "genre": "일식"
+      "genre": "일식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 5,
@@ -82,7 +92,9 @@
       "hundred": [],
       "future": [],
       "district": "성동구",
-      "genre": "양식"
+      "genre": "양식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 6,
@@ -96,7 +108,9 @@
       "hundred": [],
       "future": [],
       "district": "중구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 7,
@@ -110,7 +124,9 @@
       "hundred": [],
       "future": [],
       "district": "송파구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 8,
@@ -124,7 +140,9 @@
       "hundred": [],
       "future": [],
       "district": "영등포구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 9,
@@ -138,7 +156,9 @@
       "hundred": [],
       "future": [],
       "district": "용산구",
-      "genre": "중식"
+      "genre": "중식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 10,
@@ -152,7 +172,9 @@
       "hundred": [2022],
       "future": [2022],
       "district": "종로구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 11,
@@ -166,7 +188,9 @@
       "hundred": [],
       "future": [],
       "district": "중구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 12,
@@ -180,7 +204,9 @@
       "hundred": [],
       "future": [],
       "district": "강남구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 13,
@@ -194,7 +220,9 @@
       "hundred": [],
       "future": [],
       "district": "강남구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 14,
@@ -208,7 +236,9 @@
       "hundred": [],
       "future": [],
       "district": "강남구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 15,
@@ -222,7 +252,9 @@
       "hundred": [],
       "future": [2022],
       "district": "마포구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 16,
@@ -236,7 +268,9 @@
       "hundred": [2022],
       "future": [2022],
       "district": "강남구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     },
     {
       "id": 17,
@@ -250,7 +284,9 @@
       "hundred": [2022],
       "future": [],
       "district": "마포구",
-      "genre": "한식"
+      "genre": "한식",
+      "image": "",
+      "map": ""
     }
   ]
 }
