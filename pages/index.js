@@ -17,17 +17,17 @@ export default function Home(props) {
   });
   const categoryDate = ["michelin", "blue", "hundred", "future"];
   const categoryKind = ["district", "genre"];
-  const [dep, setDep] = useState(0);
 
   // 필터링 함수
   const makeFilter = (e) => {
     var category = e.target.name;
     var value = e.target.value;
     var checked = e.target.checked;
+    var result;
     if (checked == true) {
       if (filtering[category].indexOf(value) != 1) {
         filtering[category] = [...filtering[category], value];
-        setFiltering(filtering);
+        result = {...filtering, filtering};
       }
     }
     if (checked == false) {
@@ -35,9 +35,9 @@ export default function Home(props) {
         return n != value;
       });
       filtering[category] = currentFilter;
-      setFiltering(filtering);
+      result = {...filtering, filtering};
     }
-    setDep(dep + 1);
+    setFiltering(result);
   };
 
   const getFilteringDate = (category, result) => {
@@ -103,7 +103,7 @@ export default function Home(props) {
       });
       setFilteredStores(result);
     }
-  }, [dep]);
+  }, [filtering]);
 
   // 확인용 버튼
   function checkAll() {
