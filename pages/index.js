@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import CheckBox from "../components/Checkbox";
 import Filtering from "../components/Filtering";
 
+// 2022 -> 2023
 export default function Home(props) {
   const stores = props.stores;
   const [filteredStores, setFilteredStores] = useState([]);
@@ -45,7 +46,9 @@ export default function Home(props) {
       filtering[category].map((n) => {
         var currentS = Array.from(result).filter((store) => {
           if (store[n].length) {
-            return store[n].indexOf(2022) === 0;
+            // check.json
+            // return store[n].indexOf(2022) === 0;
+            return store[n].indexOf(2023) === 0;
           }
         });
         if (currentS.length) {
@@ -127,7 +130,8 @@ import fsPromises from "fs/promises";
 import path from "path";
 import { checkIsManualRevalidate } from "next/dist/server/api-utils";
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "data.json");
+  // const filePath = path.join(process.cwd(), "data.json");
+  const filePath = path.join(process.cwd(), "check.json");
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
 
