@@ -1,6 +1,21 @@
 import { css } from "@emotion/css";
 
-function ShopBadge({color}) {
+const typeMap = {
+    "miche" : "red",
+    "blue" : "blue",
+}
+
+function exchangeTypeToColor(type)
+{
+    return typeMap[type];
+}
+
+function ShopBadge({type}) {
+    if (!type)
+        return null;
+
+    const color = exchangeTypeToColor(type);
+    
     return (
         <div className={container(color)}>
             19

@@ -1,17 +1,15 @@
 import { css } from "@emotion/css";
 import ShopListCard from "./ShopListCard/ShopListCard";
+import storeList from "../../datas/storeList.json"
 
 function ShopList(props) {
+
+  const shopListJSX = storeList.map((storeInfo) => {
+    return <ShopListCard key={storeInfo.id} storeInfo={storeInfo}/>
+  })
   return (
     <div className={container}>
-      <ShopListCard />
-      <ShopListCard />
-      <ShopListCard />
-      <ShopListCard />
-      <ShopListCard />
-      <ShopListCard />
-      <ShopListCard />
-      <ShopListCard />
+      {shopListJSX}
     </div>
   );
 }

@@ -13,7 +13,6 @@ export default function Home() {
       </Head>
       <div className={header}>
         <p className={title}>IVTN</p>
-        <p className={subTitle}>당신을 초대합니다.</p>
       </div>
       <div className={bodyBox}>
         <ShopFilter />
@@ -29,11 +28,10 @@ const container = css`
 
 const header = css`
   height: 65px;
-  // font-family: "KOHIBaeumOTF";
   font-family: "campton", "Apple SD Gothic Neo", NanumBarunGothic,
     "나눔바른고딕", Malgun Gothic, "맑은 고딕", dotum, sans-serif;
   color: black;
-  padding: 15px 10px;
+  padding: 21px 10px;
   text-align: center;
   background-color: #fff;
   border-bottom: 1px solid #d4d4d4;
@@ -41,16 +39,12 @@ const header = css`
 
 const title = css`
   font-size: 20px;
+  height: 25px;
   line-height: 25px;
   font-weight: 800;
 `;
 
-const subTitle = css`
-  font-size: 12px;
-  font-weight: 400;
-  color: #afafaf;
-`;
-
 const bodyBox = css`
   margin: 0 auto;
+  position: relative;
 `;

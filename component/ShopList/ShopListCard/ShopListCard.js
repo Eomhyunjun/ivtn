@@ -1,20 +1,23 @@
 import { css } from "@emotion/css";
 import ShopBadge from "./ShopBadge";
 
-function ShopListCard(props) {
+function ShopListCard({ storeInfo }) {
+  if (!storeInfo) return null;
+  if (storeInfo.image)
+    console.log(storeInfo.image);
   return (
     <a className={container}>
       <div className={contentsBox}>
-        <div className={shopImg}>
+        <div className={shopImg(storeInfo.image)}>
           <div className={aboutStars}>
-            <ShopBadge color="red" />
-            <ShopBadge color="blue" />
+            <ShopBadge type="miche" />
+            <ShopBadge type="blue" />
           </div>
         </div>
 
         <div className={shopContents}>
-          <div className={shopTitle}>호호식당 익선</div>
-          <div className={shopAddr}>서울시 종로구</div>
+          <div className={shopTitle}>{storeInfo.title}</div>
+          <div className={shopAddr}>{storeInfo.district}</div>
         </div>
       </div>
     </a>
@@ -35,16 +38,17 @@ const contentsBox = css`
   margin: 0 auto;
 `;
 
-const shopContents = css`
-  
-`; 
+const shopContents = css``;
 
-const shopImg = css`
+const shopImg = (imgUrl) => css`
   position: relative;
   width: 100%;
   height: 300px;
   margin: 15px auto;
-  background-image: url("https://ldb-phinf.pstatic.net/20181002_103/1538407371194nlUKe_JPEG/cO3C7ZXp9c1X3O8_AHGrSabe.jpg");
+  background-image: url(${
+    imgUrl ??
+    "https://ldb-phinf.pstatic.net/20181002_103/1538407371194nlUKe_JPEG/cO3C7ZXp9c1X3O8_AHGrSabe.jpg"
+  });
   background-size: cover;
   background-position: center center;
 `;
