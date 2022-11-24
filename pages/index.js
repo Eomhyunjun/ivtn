@@ -1,9 +1,9 @@
 import Head from "next/head";
+import { css } from "@emotion/css";
 import { useEffect, useState } from "react";
-import CheckBox from "../components/Checkbox";
-import Filtering from "../components/Filtering";
+import ShopList from "../components/ShopList/ShopList";
+import ShopFilter from "../components/ShopFilter/ShopFilter";
 
-// 2022 -> 2023
 export default function Home(props) {
   const stores = props.stores;
   const [filteredStores, setFilteredStores] = useState([]);
@@ -20,14 +20,14 @@ export default function Home(props) {
 
   // 필터링 함수
   const makeFilter = (e) => {
-    var category = e.target.name;
-    var value = e.target.value;
+    var category = e.target.name; // michelin
+    var value = e.target.value; // 3스타
     var checked = e.target.checked;
     var result;
     if (checked == true) {
       if (filtering[category].indexOf(value) != 1) {
         filtering[category] = [...filtering[category], value];
-        result = {...filtering, filtering};
+        result = { ...filtering, filtering };
       }
     }
     if (checked == false) {
@@ -35,7 +35,7 @@ export default function Home(props) {
         return n != value;
       });
       filtering[category] = currentFilter;
-      result = {...filtering, filtering};
+      result = { ...filtering, filtering };
     }
     setFiltering(result);
   };
@@ -46,8 +46,6 @@ export default function Home(props) {
       filtering[category].map((n) => {
         var currentS = Array.from(result).filter((store) => {
           if (store[n].length) {
-            // check.json
-            // return store[n].indexOf(2022) === 0;
             return store[n].indexOf(2023) === 0;
           }
         });
@@ -114,13 +112,18 @@ export default function Home(props) {
   }
 
   return (
-    <div style={{ padding: 30 }}>
+    <div className={container}>
       <Head>
-        <title>ivtn.com</title>
+        <title>IVTN</title>
       </Head>
-      <button onClick={() => checkAll()}>확인용</button>
-      <CheckBox onClick={makeFilter} />
-      <Filtering filteredStores={filteredStores} />
+      <div className={header}>
+        <p className={title}>IVTN</p>
+      </div>
+      <div className={bodyBox}>
+        {/* <button onClick={() => checkAll()}>확인용</button> */}
+        <ShopFilter onClick={makeFilter} />
+        <ShopList filteredStores={filteredStores} />
+      </div>
     </div>
   );
 }
@@ -129,9 +132,9 @@ export default function Home(props) {
 import fsPromises from "fs/promises";
 import path from "path";
 import { checkIsManualRevalidate } from "next/dist/server/api-utils";
+
 export async function getStaticProps() {
-  // const filePath = path.join(process.cwd(), "data.json");
-  const filePath = path.join(process.cwd(), "check.json");
+  const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
 
@@ -139,3 +142,30 @@ export async function getStaticProps() {
     props: objectData,
   };
 }
+
+const container = css`
+  height: 100%;
+`;
+
+const header = css`
+  height: 65px;
+  font-family: "campton", "Apple SD Gothic Neo", NanumBarunGothic,
+    "나눔바른고딕", Malgun Gothic, "맑은 고딕", dotum, sans-serif;
+  color: black;
+  padding: 21px 10px;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+`;
+
+const title = css`
+  font-size: 20px;
+  height: 25px;
+  line-height: 25px;
+  font-weight: 800;
+`;
+
+const bodyBox = css`
+  margin: 0 auto;
+  position: relative;
+`;
