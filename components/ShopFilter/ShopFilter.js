@@ -32,7 +32,7 @@ const ShopFilter = (props) => {
         <tbody>
           {renderCategory("미쉐린", "michelin", lists["michelin"])}
           {renderCategory("블루리본", "blue", lists["blue"])}
-          {renderCategory("백년유산", "hundred", lists["hundred"])}
+          {renderCategory("백년가게", "hundred", lists["hundred"])}
           {renderCategory("미래유산", "future", lists["future"])}
           {renderCategory("지역구", "district", lists["district"])}
           {renderCategory("장르", "genre", lists["genre"])}
