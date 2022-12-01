@@ -6,7 +6,7 @@ function ShopListCard({ storeInfo }) {
   // if (storeInfo.image)
   //   console.log(storeInfo.image);
   return (
-    <a className={container}>
+    <a className={container} href={storeInfo.map}>
       <div className={contentsBox}>
         <div className={shopImg(storeInfo.image)}>
           <div className={aboutStars}>
