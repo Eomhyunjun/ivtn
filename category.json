@@ -3,7 +3,7 @@
     { "id": "michelin3", "value": "3스타" },
     { "id": "michelin2", "value": "2스타" },
     { "id": "michelin1", "value": "1스타" },
-    { "id": "michelinb", "value": "빕구르밍" }
+    { "id": "michelinb", "value": "빕구르망" }
   ],
   "blue": [
     { "id": "blue3", "value": "3개" },
