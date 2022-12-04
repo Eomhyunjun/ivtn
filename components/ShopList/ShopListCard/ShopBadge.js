@@ -20,6 +20,9 @@ function ShopBadge({ storeInfo }) {
   if (exchangeTypeToColor(storeInfo.michelinb)) colors.push("red");
   if (exchangeTypeToColor(storeInfo.blue3)) colors.push("blue");
   if (exchangeTypeToColor(storeInfo.blue2)) colors.push("blue");
+  if (exchangeTypeToColor(storeInfo.future)) colors.push("#A0A0A0");
+  if (exchangeTypeToColor(storeInfo.hundred)) colors.push("#E0E0E0");
+
 
   const badgeDiv = colors.map((color, i) => {
     const tmpkey = i + 1;
