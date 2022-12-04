@@ -1,39 +1,49 @@
 import { css } from "@emotion/css";
 
-const typeMap = {
-    "miche" : "red",
-    "blue" : "blue",
+function is2023(year) {
+  if (year === 2023) return true;
+  return false;
 }
 
-function exchangeTypeToColor(type)
-{
-    return typeMap[type];
+function exchangeTypeToColor(type) {
+  if (type.find(is2023)) return true;
+  return false;
 }
 
-function ShopBadge({type}) {
-    if (!type)
-        return null;
+function ShopBadge({ storeInfo }) {
+  const colors = [];
+  if (!storeInfo) return null;
 
-    const color = exchangeTypeToColor(type);
-    
+  if (exchangeTypeToColor(storeInfo.michelin3)) colors.push("red");
+  if (exchangeTypeToColor(storeInfo.michelin2)) colors.push("red");
+  if (exchangeTypeToColor(storeInfo.michelin1)) colors.push("red");
+  if (exchangeTypeToColor(storeInfo.michelinb)) colors.push("red");
+  if (exchangeTypeToColor(storeInfo.blue3)) colors.push("blue");
+  if (exchangeTypeToColor(storeInfo.blue2)) colors.push("blue");
+
+  const badgeDiv = colors.map((color, i) => {
+    const tmpkey = i + 1;
     return (
-        <div className={container(color)}>
-            19
-        </div>
+      <div key={tmpkey} className={container(color)}>
+        23
+      </div>
     );
+  });
+
+  return badgeDiv;
 }
 
 const container = (color) => css`
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
 
-    background: ${color};
-    
-    color: white;
-    font-weight: 500;
-    font-size: 12px;
-    text-align: center;
+  background: ${color};
+
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
 `;
 
 export default ShopBadge;

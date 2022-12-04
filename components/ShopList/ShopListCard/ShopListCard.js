@@ -1,23 +1,20 @@
 import { css } from "@emotion/css";
 import ShopBadge from "./ShopBadge";
+import logo from '../../../assets/Logo.png'
 
 function ShopListCard({ storeInfo }) {
-  if (!storeInfo) return null;
-  // if (storeInfo.image)
-  //   console.log(storeInfo.image);
   return (
     <a className={container} href={storeInfo.map}>
       <div className={contentsBox}>
         <div className={shopImg(storeInfo.image)}>
           <div className={aboutStars}>
-            <ShopBadge type="miche" />
-            <ShopBadge type="blue" />
+            <ShopBadge storeInfo={storeInfo} />
           </div>
         </div>
 
         <div className={shopContents}>
           <div className={shopTitle}>{storeInfo.title}</div>
-          <div className={shopAddr}>{storeInfo.district}</div>
+          <div className={shopAddr}>{storeInfo.district} - {storeInfo.genre}</div>
         </div>
       </div>
     </a>
@@ -47,7 +44,7 @@ const shopImg = (imgUrl) => css`
   margin: 15px auto;
   background-image: url(${
     imgUrl ??
-    "https://ldb-phinf.pstatic.net/20181002_103/1538407371194nlUKe_JPEG/cO3C7ZXp9c1X3O8_AHGrSabe.jpg"
+    logo.src
   });
   background-size: cover;
   background-position: center center;

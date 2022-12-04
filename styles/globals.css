@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  height: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -9,16 +10,32 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  all: unset;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;

@@ -4,21 +4,25 @@ import lists from "../../category.json";
 
 const ShopFilter = (props) => {
   const makeFilter = props.onClick;
+
   const renderCategory = (titleK, titleE, lists) => (
     <tr className={contentsBox} key={titleE}>
       <td className={contentsTitle}>{titleK}</td>
       <td className={contentsListBox}>
         {lists.map((list) => {
           return (
-            <div key={list.id}>
+            <div key={list.id} style={{ float: "left" }}>
               <input
                 type="checkbox"
                 id={list.id}
                 name={titleE}
                 value={list.id}
                 onClick={makeFilter}
+                className={checkBoxDisplayNone}
               />
-              <label htmlFor={list.id}>{list.value}</label>
+              <label htmlFor={list.id} className={customCheckBox}>
+                {list.value}
+              </label>
             </div>
           );
         })}
@@ -46,6 +50,9 @@ export default ShopFilter;
 
 const container = css`
   width: 100%;
+  margin-bottom: 50px;
+  background-color: white;
+  overflow: hidden;
 `;
 
 const contentsBox = css`
@@ -65,16 +72,6 @@ const contentsListBox = css`
   height: 50px;
   padding: 10px 5px 0 5px;
   border: 1px solid #f1f1f1;
-`;
-
-const contentsList = (isSelected) => css`
-  padding: 5px 5px 4px;
-  color: ${isSelected ? "black" : "#777"};
-  ${isSelected && "font-weight: 700;"}
-  text-align: left;
-  margin: 0 10px 9px;
-  line-height: 1.5;
-  font-size: 14px;
 `;
 
 const absoluteBox = css`
@@ -103,4 +100,23 @@ const selectedList = css`
   font-size: 14px;
   text-align: left;
   font-weight: 700;
+`;
+
+const checkBoxDisplayNone = css`
+  display: none;
+  &:checked +label {
+    font-weight: 700;
+    color: black;
+  }
+`;
+
+const customCheckBox = css`
+  display: block;
+  position: relative;
+  padding: 5px 5px 4px;
+  color: #777;
+  text-align: left;
+  margin: 0 10px 9px;
+  line-height: 1.5;
+  font-size: 14px;
 `;

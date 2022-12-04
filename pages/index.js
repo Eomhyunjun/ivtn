@@ -103,14 +103,6 @@ export default function Home(props) {
     }
   }, [filtering]);
 
-  // 확인용 버튼
-  function checkAll() {
-    console.log(filtering);
-    console.log(filteredStores);
-    // console.log(filtering.length);
-    // console.log(Object.keys(filtering).length);
-  }
-
   return (
     <div className={container}>
       <Head>
@@ -120,7 +112,6 @@ export default function Home(props) {
         <p className={title}>IVTN</p>
       </div>
       <div className={bodyBox}>
-        {/* <button onClick={() => checkAll()}>확인용</button> */}
         <ShopFilter onClick={makeFilter} />
         <ShopList filteredStores={filteredStores} />
       </div>
