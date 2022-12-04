@@ -20,7 +20,7 @@ a {
   font: inherit;
   font-size: inherit;
   color: inherit;
-  background-color: inherit;
+  /* background-color: inherit; 이거 뭐지? */
 }
 
 button {
