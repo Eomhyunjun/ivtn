@@ -136,6 +136,8 @@ export async function getStaticProps() {
 
 const container = css`
   height: 100%;
+  background-color: white;
+  color: black;
 `;
 
 const header = css`
